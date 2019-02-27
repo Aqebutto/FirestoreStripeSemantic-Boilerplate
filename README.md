@@ -36,7 +36,7 @@ If you are creating an open source application under a license compatible with t
 
 ## Installation
 
-- `https://github.com/Aqebutto/FirestoreStripeSemantic-Boilerplate.git`
+- `git clone https://github.com/Aqebutto/FirestoreStripeSemantic-Boilerplate.git`
 - `cd FirestoreStripeSemantic`
 - `npm install`
 - `npm start`
