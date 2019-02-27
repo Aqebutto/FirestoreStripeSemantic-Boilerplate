@@ -39,6 +39,13 @@ If you are creating an open source application under a license compatible with t
 - `git clone https://github.com/Aqebutto/FirestoreStripeSemantic-Boilerplate.git`
 - `cd FirestoreStripeSemantic`
 - `npm install`
+
+- `cd functions`
+- `npm install`
+- `firebase functions:config:set stripe.testkey="YOUR_STRIPE_TEST_KEY"`
+-  Then verify it worked `firebase functions:config:get`
+- `firebase deploy`
+
 - `npm start`
 - visit http://localhost:3000
 
@@ -60,6 +67,9 @@ REACT_APP_STORAGE_BUCKET=react-firebase-s2233d64f8.appspot.com
 REACT_APP_MESSAGING_SENDER_ID=701928454501
 ```
 
+### Stripe Configuration
+- copy/paste your public stripe key into - _src/components/constants/stripe.js_ file
+- Your secret key was set after installing node modules in functions folder with `firebase functions:config:set stripe.testkey="YOUR_STRIPE_TEST_KEY"`
 ### Activate Sign-In Methods
 
 ![firebase-enable-google-social-login_640](https://user-images.githubusercontent.com/2479967/49687774-e0a31e80-fb42-11e8-9d8a-4b4c794134e6.jpg)
