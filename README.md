@@ -36,7 +36,7 @@ If you are creating an open source application under a license compatible with t
 
 ## Installation
 
-* `git clone git@github.com:the-road-to-react-with-firebase/react-semantic-ui-firebase-authentication.git`
+* `https://github.com/Aqebutto/React-Firebase-Auth-Firebase-Functions-Stripe-Boilerplate.git`
 * `cd react-semantic-ui-firebase-authentication`
 * `npm install`
 * `npm start`
