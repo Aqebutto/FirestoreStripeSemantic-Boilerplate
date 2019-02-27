@@ -37,7 +37,7 @@ If you are creating an open source application under a license compatible with t
 ## Installation
 
 * `https://github.com/Aqebutto/React-Firebase-Auth-Firebase-Functions-Stripe-Boilerplate.git`
-* `cd react-semantic-ui-firebase-authentication`
+* `cd FirestoreStripeSemantic`
 * `npm install`
 * `npm start`
 * visit http://localhost:3000
