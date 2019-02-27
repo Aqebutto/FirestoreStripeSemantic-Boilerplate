@@ -21,7 +21,7 @@
   - Social Logins with Google, Facebook and Twitter
   - Linking of Social Logins on Account dashboard
   - Auth Persistence with Local Storage
-  - Database with Users and Messages
+  - Database with Users, Messages, Payments (Stripe token data) and Subscribtions
   - Donate (Create stripe charge)
   - Subscribe Monthly to Stripe
 
