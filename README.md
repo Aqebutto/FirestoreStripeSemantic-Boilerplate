@@ -2,28 +2,28 @@
 
 ## Features
 
-* uses:
-  * only React (create-react-app)
-  * firebase
-  * react-router
-  * **semantic UI**
-  * **stripe**
-  * **firebase funtions create charge / create subscribtion**
-* features:
-  * Sign In
-  * Sign Up
-  * Sign Out
-  * Password Forget
-  * Password Change
-  * Verification Email
-  * Protected Routes with Authorization
-  * Roles-based Authorization
-  * Social Logins with Google, Facebook and Twitter
-  * Linking of Social Logins on Account dashboard
-  * Auth Persistence with Local Storage
-  * Database with Users and Messages
-  * Donate (Create stripe charge)
-  * Subscribe Monthly to Stripe 
+- uses:
+  - only React (create-react-app)
+  - firebase
+  - react-router
+  - semantic UI
+  - **stripe**
+  - **firebase funtions create charge / create subscribtion**
+- features:
+  - Sign In
+  - Sign Up
+  - Sign Out
+  - Password Forget
+  - Password Change
+  - Verification Email
+  - Protected Routes with Authorization
+  - Roles-based Authorization
+  - Social Logins with Google, Facebook and Twitter
+  - Linking of Social Logins on Account dashboard
+  - Auth Persistence with Local Storage
+  - Database with Users and Messages
+  - Donate (Create stripe charge)
+  - Subscribe Monthly to Stripe
 
 ### Open source license
 
@@ -31,25 +31,25 @@ If you are creating an open source application under a license compatible with t
 
 ## Contributors
 
-* [John Muteti (iamuteti)](https://github.com/iamuteti)
-* [Robin Wieruch (rwieruch)](https://github.com/rwieruch)
+- [John Muteti (iamuteti)](https://github.com/iamuteti)
+- [Robin Wieruch (rwieruch)](https://github.com/rwieruch)
 
 ## Installation
 
-* `https://github.com/Aqebutto/React-Firebase-Auth-Firebase-Functions-Stripe-Boilerplate.git`
-* `cd FirestoreStripeSemantic`
-* `npm install`
-* `npm start`
-* visit http://localhost:3000
+- `https://github.com/Aqebutto/FirestoreStripeSemantic-Boilerplate.git`
+- `cd FirestoreStripeSemantic`
+- `npm install`
+- `npm start`
+- visit http://localhost:3000
 
 ### Firebase Configuration
 
-* copy/paste your configuration from your Firebase project's dashboard into one of these files
-  * *src/components/Firebase/firebase.js* file
-  * *.env* file
-  * *.env.development* and *.env.production* files
+- copy/paste your configuration from your Firebase project's dashboard into one of these files
+  - _src/components/Firebase/firebase.js_ file
+  - _.env_ file
+  - _.env.development_ and _.env.production_ files
 
-The *.env* or *.env.development* and *.env.production* files could look like the following then:
+The _.env_ or _.env.development_ and _.env.production_ files could look like the following then:
 
 ```
 REACT_APP_API_KEY=AIzaSyBtxZ3phPeXcsZsRTySIXa7n33NtQ
@@ -66,12 +66,12 @@ REACT_APP_MESSAGING_SENDER_ID=701928454501
 
 ### Activate Verification E-Mail
 
-* add a redirect URL for redirecting a user after an email verification into one of these files
-  * *src/components/Firebase/firebase.js* file
-  * *.env* file
-  * *.env.development* and *.env.production* files
+- add a redirect URL for redirecting a user after an email verification into one of these files
+  - _src/components/Firebase/firebase.js_ file
+  - _.env_ file
+  - _.env.development_ and _.env.production_ files
 
-The *.env* or *.env.development* and *.env.production* files could look like the following then (excl. the Firebase configuration).
+The _.env_ or _.env.development_ and _.env.production_ files could look like the following then (excl. the Firebase configuration).
 
 **Development:**
 

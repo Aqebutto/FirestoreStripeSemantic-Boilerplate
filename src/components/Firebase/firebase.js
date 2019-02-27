@@ -67,7 +67,7 @@ class Firebase {
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: 'http://localhost:3000' + ROUTES.HOME,
+      url: 'http://localhost:3000',
     });
 
   doPasswordUpdate = password =>
