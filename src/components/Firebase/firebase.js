@@ -4,21 +4,13 @@ import 'firebase/firestore';
 
 import * as ROUTES from '../../constants/routes';
 
-/* const config = {
-  apiKey: 'xxx',
-  authDomain: 'xxx.firebaseapp.com',
-  databaseURL: 'https://xxx.firebaseio.com',
-  projectId: 'xxx',
-  storageBucket: 'xx.appspot.com',
-  messagingSenderId: 'xx',
-}; */
 const config = {
-  apiKey: 'AIzaSyBak738TyRVBrddrX_pf-yC7px6W7ukBO8',
-  authDomain: 'digital-forening.firebaseapp.com',
-  databaseURL: 'https://digital-forening.firebaseio.com',
-  projectId: 'digital-forening',
-  storageBucket: 'digital-forening.appspot.com',
-  messagingSenderId: '268584261648',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 class Firebase {
   constructor() {
@@ -67,7 +59,7 @@ class Firebase {
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: 'http://localhost:3000',
+      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
     });
 
   doPasswordUpdate = password =>
