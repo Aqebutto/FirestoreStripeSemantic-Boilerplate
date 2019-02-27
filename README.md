@@ -32,7 +32,7 @@ If you are creating an open source application under a license compatible with t
 ## Contributors
 
 * [John Muteti (iamuteti)](https://github.com/iamuteti)
-* [Robin Wieruch (rwieruch)] (https://github.com/rwieruch)
+* [Robin Wieruch (rwieruch)](https://github.com/rwieruch)
 
 ## Installation
 
