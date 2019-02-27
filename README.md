@@ -1,21 +1,4 @@
-# react-semantic-ui-firebase-authentication
-
-[![Build Status](https://travis-ci.org/the-road-to-react-with-firebase/react-semantic-ui-firebase-authentication.svg?branch=master)](https://travis-ci.org/the-road-to-react-with-firebase/react-semantic-ui-firebase-authentication) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/the-road-to-react-with-firebase/react-semantic-ui-firebase-authentication.svg)](https://greenkeeper.io/)
-
-* [Tutorial](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/)
-* [Live Version of half of the Tutorial](https://react-semantic-ui-firebase-authentication.wieruch.com/)
-
-Related:
-
-* [Semantic UI with React Tutorial](https://www.robinwieruch.de/react-semantic-ui-tutorial/)
-
-## Variations
-
-* [Only React Version](https://github.com/the-road-to-react-with-firebase/react-firebase-authentication)
-* [Redux Version](https://github.com/the-road-to-react-with-firebase/react-redux-firebase-authentication)
-* [MobX Version](https://github.com/the-road-to-react-with-firebase/react-mobx-firebase-authentication)
-* [Gatsby Version](https://github.com/the-road-to-react-with-firebase/react-gatsby-firebase-authentication)
-* [Firestore Version](https://github.com/the-road-to-react-with-firebase/react-firestore-authentication)
+# react-semantic-ui-firebase-authentication-firestore-backend-stripe-firebase functions
 
 ## Features
 
@@ -24,6 +7,8 @@ Related:
   * firebase
   * react-router
   * **semantic UI**
+  * **stripe**
+  * **firebase funtions create charge / create subscribtion**
 * features:
   * Sign In
   * Sign Up
@@ -37,18 +22,8 @@ Related:
   * Linking of Social Logins on Account dashboard
   * Auth Persistence with Local Storage
   * Database with Users and Messages
-
-## License
-
-### Commercial license
-
-If you want to use this starter project to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. Purchase an commercial license for different team sizes:
-
-* [1 Developer](https://gum.co/react-with-firebase-starter-pack-developer)
-* [Team of up to 8 Developers](https://gum.co/react-with-firebase-starter-pack-team)
-* [Unlimited Developers of an Organization](https://gum.co/react-with-firebase-starter-pack-organization)
-
-It grants you also access to the other starter projects in this GitHub organization.
+  * Donate (Create stripe charge)
+  * Subscribe Monthly to Stripe 
 
 ### Open source license
 
@@ -57,6 +32,7 @@ If you are creating an open source application under a license compatible with t
 ## Contributors
 
 * [John Muteti (iamuteti)](https://github.com/iamuteti)
+* [Robin Wieruch (rwieruch)] (https://github.com/rwieruch)
 
 ## Installation
 
@@ -65,8 +41,6 @@ If you are creating an open source application under a license compatible with t
 * `npm install`
 * `npm start`
 * visit http://localhost:3000
-
-Get an overview of Firebase, how to create a project, what kind of features Firebase offers, and how to navigate through the Firebase project dashboard in this [visual tutorial for Firebase](https://www.robinwieruch.de/firebase-tutorial/).
 
 ### Firebase Configuration
 
@@ -89,12 +63,6 @@ REACT_APP_MESSAGING_SENDER_ID=701928454501
 ### Activate Sign-In Methods
 
 ![firebase-enable-google-social-login_640](https://user-images.githubusercontent.com/2479967/49687774-e0a31e80-fb42-11e8-9d8a-4b4c794134e6.jpg)
-
-* Email/Password
-* [Google](https://www.robinwieruch.de/react-firebase-social-login/)
-* [Facebook](https://www.robinwieruch.de/firebase-facebook-login/)
-* [Twitter](https://www.robinwieruch.de/firebase-twitter-login/)
-* [Troubleshoot](https://www.robinwieruch.de/react-firebase-social-login/)
 
 ### Activate Verification E-Mail
 
