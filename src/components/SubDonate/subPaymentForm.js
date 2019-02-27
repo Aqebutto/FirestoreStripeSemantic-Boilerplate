@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
 import { Form } from 'semantic-ui-react';
-import axios from 'axios';
 
 import { withFirebase } from '../Firebase';
 
@@ -27,13 +26,6 @@ class SubPaymentForm extends Component {
     let { token } = await this.props.stripe.createToken({
       name: this.state.name,
     });
-    /*     let { customer } = await axios.post(
-      'https://us-central1-digital-forening.cloudfunctions.net/subPost',
-      {
-        email: this.state.email,
-        stripeToken: token,
-      },
-    ); */
     const payment = { token: token, amount: this.state.price };
     this.props.firebase
       .subscriptions()

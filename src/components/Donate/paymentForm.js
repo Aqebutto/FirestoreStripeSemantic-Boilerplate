@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
-import {
-  Form,
-  Label,
-  /*   Button,
-  Grid,
-  Header,
-  Message,
-  Checkbox, */
-} from 'semantic-ui-react';
-import axios from 'axios';
+import { Form } from 'semantic-ui-react';
 
 import { withFirebase } from '../Firebase';
 
@@ -23,11 +14,8 @@ class PaymentForm extends Component {
     name: '',
     email: '',
     price: null,
-    loading: false,
   };
-  componentDidMount() {
-    /* this.setState({ loading: true }); */
-  }
+
   changeHandler = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -47,18 +35,9 @@ class PaymentForm extends Component {
       .collection('charges')
       .doc(payment.token.id)
       .set(payment)
-      .then(function () {
+      .then(function() {
         console.log('Donation successfully written!');
       });
-
-    //make the call to the NodeJs Striper Server to create the charge
-    /*     axios
-      .post('http://localhost:8080/charge', {
-        description: 'Payment of ' + this.state.name,
-        source: token.id,
-        amount: this.state.price,
-      })
-      .then(data => console.log(data)); */
   };
 
   render() {

@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { StripeProvider, Elements } from 'react-stripe-elements';
 
 import SubPaymentForm from './subPaymentForm';
+import * as PUBLIC_KEY from '../../constants/stripe';
 
 export default class SubDonate extends Component {
   render() {
     return (
       <div>
-        <StripeProvider apiKey="pk_test_Ba2BNqKwFMRz1SRHzizA9gGJ">
+        <StripeProvider apiKey={PUBLIC_KEY.PUBLIC_KEY}>
           <Elements>
             <SubPaymentForm />
           </Elements>

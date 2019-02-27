@@ -1,8 +1,17 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/database';
 import 'firebase/firestore';
 
+import * as ROUTES from '../../constants/routes';
+
+/* const config = {
+  apiKey: 'xxx',
+  authDomain: 'xxx.firebaseapp.com',
+  databaseURL: 'https://xxx.firebaseio.com',
+  projectId: 'xxx',
+  storageBucket: 'xx.appspot.com',
+  messagingSenderId: 'xx',
+}; */
 const config = {
   apiKey: 'AIzaSyBak738TyRVBrddrX_pf-yC7px6W7ukBO8',
   authDomain: 'digital-forening.firebaseapp.com',
@@ -17,16 +26,12 @@ class Firebase {
 
     /* Helper */
 
-    this.serverValue = app.database.ServerValue;
     this.fieldValue = app.firestore.FieldValue;
     this.emailAuthProvider = app.auth.EmailAuthProvider;
 
-    /* Firebase APIs */
+    /* Firestore APIs */
 
     this.auth = app.auth();
-    this.db = app.database();
-
-    //
     this.firestore = app.firestore();
     this.firestore.settings({
       timestampsInSnapshots: true,
@@ -62,7 +67,7 @@ class Firebase {
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+      url: 'http://localhost:3000' + ROUTES.HOME,
     });
 
   doPasswordUpdate = password =>
@@ -73,10 +78,10 @@ class Firebase {
   onAuthUserListener = (next, fallback) =>
     this.auth.onAuthStateChanged(authUser => {
       if (authUser) {
-        this.user(authUser.uid)
-          .once('value')
+        return this.user(authUser.uid)
+          .get()
           .then(snapshot => {
-            const dbUser = snapshot.val();
+            const dbUser = snapshot.data();
 
             // default empty roles
             if (!dbUser.roles) {
@@ -99,25 +104,19 @@ class Firebase {
       }
     });
 
-  // *** User API ***
-
-  user = uid => this.db.ref(`users/${uid}`);
-
-  users = () => this.db.ref('users');
-
   // *** Message API ***
 
-  message = uid => this.db.ref(`messages/${uid}`);
+  message = uid => this.firestore.doc(`messages/${uid}`);
 
-  messages = () => this.db.ref('messages');
+  messages = () => this.firestore.collection('messages');
 
-  // Stripe API firestore
+  // Stripe API
 
   payments = () => this.firestore.collection('payments');
 
   subscriptions = () => this.firestore.collection('subscriptions');
 
-  // *** User API FIRESTORE***
+  // *** User API ***
 
   user = uid => this.firestore.doc(`users/${uid}`);
 

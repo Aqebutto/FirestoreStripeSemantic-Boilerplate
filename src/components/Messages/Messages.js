@@ -32,21 +32,19 @@ class Messages extends Component {
   onListenForMessages = () => {
     this.setState({ loading: true });
 
-    this.props.firebase
+    this.unsubscribe = this.props.firebase
       .messages()
-      .orderByChild('createdAt')
-      .limitToLast(this.state.limit)
-      .on('value', snapshot => {
-        const messageObject = snapshot.val();
-
-        if (messageObject) {
-          const messageList = Object.keys(messageObject).map(key => ({
-            ...messageObject[key],
-            uid: key,
-          }));
+      .orderBy('createdAt', 'desc')
+      .limit(this.state.limit)
+      .onSnapshot(snapshot => {
+        if (snapshot.size) {
+          let messages = [];
+          snapshot.forEach(doc =>
+            messages.push({ ...doc.data(), uid: doc.id }),
+          );
 
           this.setState({
-            messages: messageList,
+            messages: messages.reverse(),
             loading: false,
           });
         } else {
@@ -56,7 +54,7 @@ class Messages extends Component {
   };
 
   componentWillUnmount() {
-    this.props.firebase.messages().off();
+    this.unsubscribe();
   }
 
   onChangeText = event => {
