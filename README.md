@@ -1,4 +1,4 @@
-# react-semantic-ui-firebase-authentication-firestore-backend-stripe-firebase functions
+# FirestoreStripeSemantic made in React
 
 ## Features
 
