@@ -23,7 +23,7 @@
   - Auth Persistence with Local Storage
   - Database with Users, Messages, Payments (Stripe token data) and Subscribtions
   - Donate (Create stripe charge)
-  - Subscribe Monthly to Stripe
+  - Subscribe Monthly with Stripe
 
 ### Open source license
 
